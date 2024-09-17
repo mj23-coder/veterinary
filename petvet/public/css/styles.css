@@ -1,62 +1,62 @@
-*,
-*:before,
-*:after {
+/* Apply box-sizing and reset margin/padding for all elements */
+*, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Basic styling for the body */
 body {
     overflow: hidden;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     background: #ffffff;
 }
-.pets{
-    width: 100vw;      /* 100% of the viewport width */
-    height: 100vh;     /* 100% of the viewport height */
-    position: fixed;   
+
+/* pet styling */
+.pet {
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    position: fixed;
     top: 0;
     left: 0;
-    background-size: cover;  
-    background-position: center center;  
+    background-size: cover;
+    background-position: center center;
 }
 
-input,button {
+/* Reset styles for input and button elements */
+input, button {
     border: none;
     outline: none;
     background: none;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.tip {
-    font-size: 20px;
-    margin: 40px auto 50px;
-    text-align: center;
-}
-
-.cont {
+/* Main container for forms */
+.container {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
     width: 900px;
     height: 550px;
-    margin: 60px auto 100px ;
+    margin: 60px auto 100px;
     background: #fff;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 
+                10px 10px 15px rgba(70, 70, 70, 0.15), 
+                inset -10px -10px 15px rgba(255, 255, 255, 0.3), 
+                inset 10px 10px 15px rgba(70, 70, 70, 0.15);
 }
 
-.form {
+/* Styling for form containers */
+.form-container {
     position: relative;
     width: 640px;
     height: 100%;
-    -webkit-transition: -webkit-transform 1.2s ease-in-out;
-    transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
     padding: 50px 30px 0;
 }
 
-.sub-cont {
+/* Sub-container styling for image and text section */
+.sub-container {
     overflow: hidden;
     position: absolute;
     left: 640px;
@@ -65,17 +65,15 @@ input,button {
     height: 100%;
     padding-left: 260px;
     background: #fff;
-    -webkit-transition: -webkit-transform 1.2s ease-in-out;
-    transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.cont.s--signup .sub-cont {
-    -webkit-transform: translate3d(-640px, 0, 0);
+/* Transformations for sign-up transition */
+.container.s--signup .sub-container {
     transform: translate3d(-640px, 0, 0);
 }
 
+/* Button styling */
 button {
     display: block;
     margin: 0 auto;
@@ -87,7 +85,8 @@ button {
     cursor: pointer;
 }
 
-.img {
+/* Styling for image section */
+.image-container {
     overflow: hidden;
     z-index: 2;
     position: absolute;
@@ -102,7 +101,8 @@ button {
     background-color: #ff9500;
 }
 
-.img:before {
+/* Image background effects */
+.image-container:before {
     content: '';
     position: absolute;
     right: 0;
@@ -112,12 +112,10 @@ button {
     background-image: url("ext.jpg");
     opacity: .8;
     background-size: cover;
-    -webkit-transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.img:after {
+.image-container:after {
     content: '';
     position: absolute;
     left: 0;
@@ -127,12 +125,13 @@ button {
     background: rgba(183, 165, 165, 0.6);
 }
 
-.cont.s--signup .img:before {
-    -webkit-transform: translate3d(640px, 0, 0);
+/* Transformations for image section during sign-up transition */
+.container.s--signup .image-container:before {
     transform: translate3d(640px, 0, 0);
 }
 
-.img__text {
+/* Text within image section */
+.image-text {
     z-index: 2;
     position: absolute;
     left: 0;
@@ -141,45 +140,43 @@ button {
     padding: 0 20px;
     text-align: center;
     color: #fff;
-    -webkit-transition: -webkit-transform 1.2s ease-in-out;
-    transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
-    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.img__text h2 {
+.image-text h2 {
     margin-bottom: 10px;
     font-weight: normal;
 }
 
-.img__text p {
+.image-text p {
     font-size: 14px;
     line-height: 1.5;
 }
 
-.cont.s--signup .img__text.m--up {
-    -webkit-transform: translateX(520px);
+/* Transformations for image text during sign-up transition */
+.container.s--signup .image-text.image-text--up {
     transform: translateX(520px);
 }
 
-.img__text.m--in {
-    -webkit-transform: translateX(-520px);
+.image-text.image-text--in {
     transform: translateX(-520px);
 }
-.corgi{
-    position: absolute;     /* Allows you to move it anywhere inside the container */
-    top: 168px;               /* Moves it vertically to the center */
-    left: -30px;              /* Moves it horizontally to the center */
+
+.container.s--signup .image-text.image-text--in {
+    transform: translateX(0);
+}
+
+/* Corgi image styling */
+.corgi-image {
+    position: absolute;
+    top: 168px;
+    left: -30px;
     width: 350px;
     height: 200px;
 }
 
-.cont.s--signup .img__text.m--in {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-
-.img__btn {
+/* Button for switching between forms */
+.image-buttons {
     overflow: hidden;
     z-index: 2;
     position: relative;
@@ -193,7 +190,7 @@ button {
     cursor: pointer;
 }
 
-.img__btn:after {
+.image-buttons:after {
     content: '';
     z-index: 2;
     position: absolute;
@@ -205,45 +202,40 @@ button {
     border-radius: 30px;
 }
 
-.img__btn span {
+/* Span inside button */
+.image-buttons span {
     position: absolute;
     left: 0;
     top: 0;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    -webkit-transition: -webkit-transform 1.2s;
-    transition: -webkit-transform 1.2s;
     transition: transform 1.2s;
-    transition: transform 1.2s, -webkit-transform 1.2s;
 }
 
-.img__btn span.m--in {
-    -webkit-transform: translateY(-72px);
+/* Transformations for button spans */
+.image-buttons span.image-button--in {
     transform: translateY(-72px);
 }
 
-.cont.s--signup .img__btn span.m--in {
-    -webkit-transform: translateY(0);
+.container.s--signup .image-buttons span.image-button--in {
     transform: translateY(0);
 }
 
-.cont.s--signup .img__btn span.m--up {
-    -webkit-transform: translateY(72px);
+.container.s--signup .image-buttons span.image-button--up {
     transform: translateY(72px);
 }
 
+/* Heading styling */
 h2 {
     width: 100%;
     font-size: 26px;
     text-align: center;
 }
 
+/* Label styling */
 label {
     display: block;
     width: 260px;
@@ -257,6 +249,7 @@ label span {
     text-transform: uppercase;
 }
 
+/* Input styling */
 input {
     display: block;
     width: 100%;
@@ -267,50 +260,48 @@ input {
     text-align: center;
 }
 
-.forgot-pass {
+/* Forgot password styling */
+.forgot-password {
     margin-top: 15px;
     text-align: center;
     font-size: 12px;
     color: #cfcfcf;
 }
 
-.submit {
+/* Submit button styling */
+.form-button {
     margin-top: 40px;
     margin-bottom: 20px;
     background: #ff9500;
     text-transform: uppercase;
 }
 
-.fb-btn {
+/* Facebook button styling */
+.fb-button {
     border: 2px solid #d3dae9;
     color: #8fa1c7;
 }
 
-.fb-btn span {
+.fb-button span {
     font-weight: bold;
     color: #455a81;
 }
 
-.sign-in {
-    -webkit-transition-timing-function: ease-out;
+/* Transitions for sign-in and sign-up forms */
+.form-sign-in {
     transition-timing-function: ease-out;
 }
 
-.cont.s--signup .sign-in {
-    -webkit-transition-timing-function: ease-in-out;
+.container.s--signup .form-sign-in {
     transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 1.2s;
     transition-duration: 1.2s;
-    -webkit-transform: translate3d(640px, 0, 0);
     transform: translate3d(640px, 0, 0);
 }
 
-.sign-up {
-    -webkit-transform: translate3d(-900px, 0, 0);
+.form-sign-up {
     transform: translate3d(-900px, 0, 0);
 }
 
-.cont.s--signup .sign-up {
-    -webkit-transform: translate3d(0, 0, 0);
+.container.s--signup .form-sign-up {
     transform: translate3d(0, 0, 0);
 }
