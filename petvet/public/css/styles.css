@@ -37,8 +37,8 @@ input, button {
     overflow: hidden;
     position: relative;
     width: 900px;
-    height: 550px;
-    margin: 60px auto 100px;
+    height: 450px;
+    margin: 40px auto 100px;
     background: #fff;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 
                 10px 10px 15px rgba(70, 70, 70, 0.15), 
@@ -169,7 +169,7 @@ button {
 /* Corgi image styling */
 .corgi-image {
     position: absolute;
-    top: 168px;
+    top: 147px;
     left: -30px;
     width: 350px;
     height: 200px;
@@ -182,7 +182,7 @@ button {
     position: relative;
     width: 100px;
     height: 36px;
-    margin: 0 auto;
+    margin: 0 auto -60px;
     background: transparent;
     color: #fff;
     text-transform: uppercase;

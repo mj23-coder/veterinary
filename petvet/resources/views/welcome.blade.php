@@ -7,7 +7,7 @@
     <title>PetVet</title>
 </head>
 <body>
-    <img class="pet" src="{{ asset('images/pet.jpg') }}" alt="Hero Image"> 
+    <img class="pet" src="{{ asset('images/petpet.png') }}" alt="Hero Image"> 
     <br>
     <br>
     <div class="container">
